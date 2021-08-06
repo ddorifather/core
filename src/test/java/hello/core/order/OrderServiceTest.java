@@ -7,6 +7,7 @@ import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -24,6 +25,7 @@ public class OrderServiceTest {
         orderService = appConfig.orderService();
     }
     @Test
+    @DisplayName("주문생성")
     void createOrder(){
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
